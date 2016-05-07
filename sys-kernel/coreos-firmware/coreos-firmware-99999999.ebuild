@@ -103,11 +103,6 @@ src_prepare() {
 		done
 	done
 
-	einfo "Pruning all unneeded firmware files..."
-	sort -u "${T}/firmware-scan" > "${T}/firmware"
-	find * -not -type d \
-		| sort "${T}/firmware" "${T}/firmware" - \
-		| uniq -u | xargs -r rm
 	assert
 
 	# Prune empty directories
