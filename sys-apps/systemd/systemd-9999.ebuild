@@ -39,8 +39,7 @@ REQUIRED_USE="importd? ( curl gcrypt lzma )"
 
 MINKV="3.11"
 
-COMMON_DEPEND=">=sys-apps/util-linux-2.27.1:0=[${MULTILIB_USEDEP}]
-	sys-libs/libcap:0=[${MULTILIB_USEDEP}]
+COMMON_DEPEND="sys-libs/libcap:0=[${MULTILIB_USEDEP}]
 	!<sys-libs/glibc-2.16
 	acl? ( sys-apps/acl:0= )
 	apparmor? ( sys-libs/libapparmor:0= )
