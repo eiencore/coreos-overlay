@@ -34,4 +34,6 @@ src_install() {
 		"${D}"/usr/lib/dracut/modules.d/30ignition/ignition-generator \
 		"${D}"/usr/lib/dracut/modules.d/99setup-root/initrd-setup-root \
 		|| die chmod
+
+	sed  '/initrd-/d' -i "${D}"/usr/lib/dracut/modules.d/02systemd-networkd/module-setup.sh
 }
